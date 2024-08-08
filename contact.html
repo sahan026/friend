@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <div class="header">LearnHTML.edu</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="course.html">Courses</a>
+      <a href="forum.html">Forum</a>
+      <a href="#contact.html" class="active">Contact Us</a>
+    </nav>
+    <div class="main">
+      <div class="left_side">
+        LearnHTML.edu No. 40/44 Colombo 10 Sri Lanka.
+        <br />
+        000094 045 38888988
+        <br />
+        <a href="#">learnhtml@edu.lk</a>
+        <a href="#">http://learnhtml.edu</a>
+      </div>
+      <div class="inputbox">
+        <h1>Personal Information:</h1>
+        <form name="Personal_information" method="post" action="submit.html">
+          <div class="form-group">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" />
+          </div>
+
+          <div class="form-group">
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" />
+          </div>
+
+          <div class="form-group">
+            <label>Gender:</label>
+            <div class="box">
+              <label>
+                <input type="radio" name="gender" value="male" /> Male
+              </label>
+              <label>
+                <input type="radio" name="gender" value="female" /> Female
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" />
+          </div>
+
+          <div class="form-group">
+            <label for="country">Country:</label>
+            <select name="country" id="country">
+              <option value="Srilanka">Sri Lanka</option>
+              <option value="usa">U S A</option>
+              <option value="india">India</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="details">Other Details:</label>
+            <textarea id="details" name="details"></textarea>
+          </div>
+          <input type="submit"value="submit">
+        </form>
+      </div>
+    </div>
+    <footer>© LearnHTML.edu- 2020</footer>
+  </body>
+</html>

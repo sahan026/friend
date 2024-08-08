@@ -1,56 +1,122 @@
 body {
-    background-color: rgb(8, 158, 223);
-    margin: 0;
-  }
-  
-  .header {
-    margin: 0;
-    height: 80px;
+  background-color: rgb(175, 224, 245);
+  margin: 0;
+  height: 100vh; 
+  overflow-y: hidden; 
+}
+
+.header {
+  margin: 0;
+  height: 80px;
+  width: 100%;
+  background-color: blue;
+  color: white;
+  font-size: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  margin: 0;
+  background-color: rgb(57, 92, 229);
+  width: 100%;
+  height: 150px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  padding: 45px 76px;
+  text-decoration: none;
+  font-size: 45px;
+  color: black;
+  font-weight: bold;
+  border-right: 1px solid white;
+}
+
+nav a:last-child {
+  border-right: none;
+}
+
+nav a.active {
+  background-color: white;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  background-color: rgb(8, 158, 223);
+  position: fixed;
+  overflow-y: auto; /* Adds a vertical scrollbar if content overflows */
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 25px;
+  border-bottom: 1px solid white;
+}
+
+.sidebar a.active {
+  background-color: #e9dd81;
+  color: rgb(0, 0, 0);
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 300px;
+  padding: 1px 16px;
+  height: 370px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
     width: 100%;
-    background-color: blue;
-    color: white;
-    font-size: 55px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: auto;
+    position: relative;
   }
-  
-  nav {
-    margin: 0;
-    background-color: rgb(57, 92, 229);
-    width: 100%;
-    height: 150px;
-    border: 1px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .sidebar a {
+    float: left;
   }
-  
-  nav a {
-    padding: 45px 76px;
-    text-decoration: none;
-    font-size: 45px;
-    color: black;
-    font-weight: bold;
-    border-right: 1px solid white;
+  div.content {
+    margin-left: 0;
   }
-  
-  nav a:last-child {
-    border-right: none;
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
   }
-  
-  nav a.active {
-    background-color: white;
-  }
-  
-  footer {
-    width: 100%;
-    height: 100px;
-    background-color: rgb(67, 66, 66);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 35px;
-  }
-  
+}
+
+ul.b {
+  list-style-type: square;
+  font-size: 35px;
+  color: blue;
+}
+
+ul.b li {
+  margin-bottom: 15px;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(67, 66, 66);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 35px;
+}
